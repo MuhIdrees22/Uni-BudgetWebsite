@@ -57,7 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    if (!localStorage.getItem("loggedIn") && !page.includes("login") && !page.includes("signup")) {
+    // Allow public pages (login, signup, reviews) without being logged in
+    if (!localStorage.getItem("loggedIn") && !page.includes("login") && !page.includes("signup") && !page.includes("reviews")) {
         window.location.href = "index.html";
         return;
     }
