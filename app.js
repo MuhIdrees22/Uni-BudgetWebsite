@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 name: document.getElementById("signup-name").value,
                 email: document.getElementById("signup-email").value,
                 phone: document.getElementById("signup-phone").value || "",
+                address: document.getElementById("signup-address").value || "",
                 password: document.getElementById("signup-password").value
             };
             localStorage.setItem("user", JSON.stringify(user));
@@ -386,9 +387,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const nameEl = document.getElementById("set-name");
             const emailEl = document.getElementById("set-email");
             const phoneEl = document.getElementById("set-phone");
+            const addressEl = document.getElementById("set-address");
             if (nameEl) nameEl.textContent = savedUser.name || "Student";
             if (emailEl) emailEl.textContent = savedUser.email || "you@example.com";
             if (phoneEl) phoneEl.textContent = savedUser.phone || "—";
+            if (addressEl) addressEl.textContent = savedUser.address || "—";
         }
     }
 
