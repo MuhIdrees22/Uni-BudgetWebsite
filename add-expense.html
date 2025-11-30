@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>UniBudget – Add Expense</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="add-expense">
+  <div class="bg-gradient"></div>
+
+  <header class="top-header glass">
+    <div class="brand-pill">
+      <div class="brand-icon">💰</div>
+      <div>
+        <h1 class="brand-title">UniBudget</h1>
+        <p class="brand-subtitle">Student Expense Tracker</p>
+      </div>
+    </div>
+
+    <nav class="nav-row">
+      <a href="dashboard.html" class="nav-pill">👤 Dashboard</a>
+      <a href="add-expense.html" class="nav-pill active">💲 Add Expense</a>
+      <a href="reports.html" class="nav-pill">📋 Reports</a>
+      <a href="settings.html" class="nav-pill">⚙️ Settings</a>
+      <a href="#" id="sign-out" class="nav-pill">🚪 Sign out</a>
+    </nav>
+  </header>
+
+  <main class="main-layout">
+    <section class="card glass two-column">
+      <div>
+        <h2>Add an Expense</h2>
+        <form id="add-expense-form" class="form-vertical">
+          <label>
+            <span>Name</span>
+            <input id="exp-name" type="text" placeholder="e.g. Algorithms Textbook" required />
+          </label>
+
+          <label>
+            <span>Category</span>
+            <select id="exp-category" required>
+              <option value="Food">Food</option>
+              <option value="Rent">Rent</option>
+              <option value="Transport">Transport</option>
+              <option value="School">School</option>
+              <option value="Other">Other</option>
+              <option value="Income">Income</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Date</span>
+            <input id="exp-date" type="date" required />
+          </label>
+
+          <label>
+            <span>Description</span>
+            <textarea id="exp-description" rows="3" placeholder="More details..."></textarea>
+          </label>
+
+          <label>
+            <span>Amount <span id="currency-code" style="opacity: 0.7; font-size: 0.85rem;">(CAD)</span></span>
+            <input id="exp-amount" type="number" min="0" step="0.01" placeholder="0.00" required />
+          </label>
+
+          <label>
+            <span>Tag</span>
+            <select id="exp-tag">
+              <option value="Food">Food</option>
+              <option value="Bills">Bills</option>
+              <option value="Study">Study</option>
+              <option value="Leisure">Leisure</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+
+          <button type="submit" class="btn primary full">Add Expense</button>
+        </form>
+      </div>
+
+      <!-- Right information panel like your Figma -->
+      <aside class="info-panel glass-soft">
+        <h3 class="info-title">Managing expenses</h3>
+        <p class="info-text">
+          Made a cash payment? A future payment coming up?
+          Use this page to add expenses so your dashboard and reports
+          always stay accurate.
+        </p>
+      </aside>
+    </section>
+
+    <!-- Recent list on add-expense page (styled like dashboard) -->
+    <section class="glass section table-section">
+      <h2>Recent Expenses</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Tag</th>
+          </tr>
+        </thead>
+        <tbody id="recent-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>UniBudget – Welcome Back</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="login">
+  <div class="bg-gradient"></div>
+
+  <header class="hero-header glass main-brand">
+    <div class="brand-icon">💰</div>
+    <div>
+      <h1 class="brand-title">UniBudget</h1>
+      <p class="brand-subtitle">Student Expense Tracker</p>
+    </div>
+  </header>
+
+  <main class="auth-layout">
+    <!-- Left: Login -->
+    <section class="auth-card glass">
+      <h2 class="auth-title">Welcome Back</h2>
+
+      <form id="login-form" class="form-vertical">
+        <label>
+          <span>Email or Phone</span>
+          <input id="login-email" type="text" placeholder="you@example.com" required />
+        </label>
+
+        <label>
+          <span>Password</span>
+          <div class="password-field">
+            <input id="login-password" type="password" placeholder="••••••••" required />
+          </div>
+        </label>
+
+        <button type="submit" class="btn primary full">Sign In</button>
+      </form>
+    </section>
+
+    <!-- Right: Sign up + Reviews -->
+    <section class="auth-card glass">
+      <h2 class="auth-title">Not a member?<br />Join our family</h2>
+
+      <button id="go-signup" class="btn secondary full" type="button">
+        Sign up
+      </button>
+
+      <div class="spacer-24"></div>
+
+      <div class="reviews-cta glass-soft">
+        <p class="reviews-text">
+          Hesitant? Read what our users have to say.
+        </p>
+        <button id="go-reviews" class="btn outline" type="button">
+          Reviews
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

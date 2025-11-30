@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>UniBudget – Sign Up</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="signup">
+  <div class="bg-gradient"></div>
+
+  <header class="hero-header glass main-brand">
+    <div class="brand-icon">💰</div>
+    <div>
+      <h1 class="brand-title">UniBudget</h1>
+      <p class="brand-subtitle">Student Expense Tracker</p>
+    </div>
+  </header>
+
+  <main class="auth-layout single">
+    <section class="auth-card glass wide">
+      <h2 class="auth-title">Sign up</h2>
+
+      <form id="signup-form" class="form-vertical">
+        <label>
+          <span>Name</span>
+          <input id="signup-name" type="text" placeholder="John Doe" required />
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input id="signup-email" type="email" placeholder="you@example.com" required />
+        </label>
+
+        <label>
+          <span>Phone Number</span>
+          <input id="signup-phone" type="tel" placeholder="(123) 456-7890" />
+        </label>
+
+        <label>
+          <span>Password</span>
+          <div class="password-field">
+            <input id="signup-password" type="password" placeholder="Create a password" required />
+          </div>
+        </label>
+
+        <button type="submit" class="btn primary full">Sign up</button>
+
+        <p class="auth-footnote">
+          Already have an account?
+          <a href="index.html">Sign in</a>
+        </p>
+      </form>
+    </section>
+
+    <!-- Right-hand info block like your Figma -->
+    <section class="info-panel glass">
+      <h3 class="info-title">Best student budgeting tool</h3>
+      <p class="info-text">
+        It’s your money. We’ll help you manage it. From tracking
+        textbooks and late-night food runs to monthly rent, UniBudget
+        keeps everything simple and in one place.
+      </p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

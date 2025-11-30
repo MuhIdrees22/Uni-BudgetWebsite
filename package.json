@@ -1,0 +1,16 @@
+{
+  "name": "unibudget-website",
+  "version": "1.0.0",
+  "description": "UniBudget Student Expense Tracker - Generated from Figma design",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "live-server --port=3000"
+  },
+  "keywords": ["budget", "expense-tracker", "student", "finance"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UniBudget – Reports</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="reports">
+  <div class="bg-gradient"></div>
+
+  <header class="top-header glass">
+    <div class="brand-pill">
+      <div class="brand-icon">💰</div>
+      <div>
+        <h1 class="brand-title">UniBudget</h1>
+        <p class="brand-subtitle">Student Expense Tracker</p>
+      </div>
+    </div>
+
+    <nav class="nav-row">
+      <a href="dashboard.html" class="nav-pill">👤 Dashboard</a>
+      <a href="add-expense.html" class="nav-pill">💲 Add Expense</a>
+      <a href="reports.html" class="nav-pill active">📋 Reports</a>
+      <a href="settings.html" class="nav-pill">⚙️ Settings</a>
+      <a href="#" id="sign-out" class="nav-pill">🚪 Sign out</a>
+    </nav>
+  </header>
+
+  <main class="main-layout">
+
+    <!-- Monthly Reports Table -->
+    <section class="glass section reports-table-section">
+      <h2>Monthly Reports</h2>
+      <p class="subtitle">View income, expenses, and budget left for each month.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>Income</th>
+            <th>Expenses</th>
+            <th>Budget Left</th>
+          </tr>
+        </thead>
+        <tbody id="monthly-report-body">
+          <tr>
+            <td colspan="4" style="text-align: center; opacity: 0.7; padding: 20px;">No data yet. Add expenses to see monthly reports.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Info Panel -->
+    <section class="glass section info-section">
+      <h3 class="info-title">Track your monthly spending with ease</h3>
+      <p class="info-text">
+        View your income, expenses and remaining budget at a glance. Our report tool makes it simple to stay in control of your money every month.
+      </p>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="glass section overview-section">
+      <h2>Overview</h2>
+      <div class="overview-card-single">
+        <div class="overview-item">
+          <div class="overview-label">Highest Income</div>
+          <h3 id="highest-income-month" class="overview-value">—</h3>
+        </div>
+        <div class="overview-item">
+          <div class="overview-label">Lowest Budget Left</div>
+          <h3 id="lowest-budget-month" class="overview-value">—</h3>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

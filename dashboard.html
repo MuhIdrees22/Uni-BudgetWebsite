@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UniBudget – Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body data-page="dashboard">
+  <div class="bg-gradient"></div>
+
+  <header class="top-header glass">
+    <div class="brand-pill">
+      <div class="brand-icon">💰</div>
+      <div>
+        <h1 class="brand-title">UniBudget</h1>
+        <p class="brand-subtitle">Student Expense Tracker</p>
+      </div>
+    </div>
+
+    <nav class="nav-row">
+      <a href="dashboard.html" class="nav-pill active">👤 Dashboard</a>
+      <a href="add-expense.html" class="nav-pill">💲 Add Expense</a>
+      <a href="reports.html" class="nav-pill">📋 Reports</a>
+      <a href="settings.html" class="nav-pill">⚙️ Settings</a>
+      <a href="#" id="sign-out" class="nav-pill">🚪 Sign out</a>
+    </nav>
+  </header>
+
+  <main class="main-layout">
+
+    <!-- Balance Stats -->
+    <section class="glass section section-stats">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-label">Total Balance</div>
+          <h2 id="bal-total">$1,200.00</h2>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Income</div>
+          <h2 id="bal-income">$1,200.00</h2>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Expenses</div>
+          <h2 id="bal-expense">$0.00</h2>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Budget Left</div>
+          <h2 id="bal-left">$1,200.00</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Breakdown -->
+    <section class="glass section breakdown-section">
+      <div class="breakdown-header">
+        <div class="breakdown-text">
+          <h2>Breakdown</h2>
+          <p class="subtitle">Here, you'll find the simplest breakdown of your expenses. Is there an issue? Check your Reports tab, or call us at 123-456-7890</p>
+        </div>
+        <div class="breakdown-chart-label">Expense Breakdown</div>
+      </div>
+      <div class="charts-container">
+        <div class="chart-wrapper">
+          <canvas id="pieChart"></canvas>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="barChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Transactions -->
+    <section class="glass section table-section">
+      <h2>Recent Transactions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Tag</th>
+          </tr>
+        </thead>
+        <tbody id="recent-body">
+          <tr>
+            <td colspan="6" style="text-align: center; opacity: 0.7; padding: 20px;">No expenses yet. Add one to get started!</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Debug Section -->
+    <section class="glass section" style="margin-top: 20px; padding: 20px;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <h3 style="margin: 0 0 10px 0;">Debug Info</h3>
+          <p id="debug-info" style="margin: 0; opacity: 0.8; font-size: 0.9rem;"></p>
+        </div>
+        <button id="debug-clear" style="padding: 10px 20px; background: #dc2626; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Clear All Expenses</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
